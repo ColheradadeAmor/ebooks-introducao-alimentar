@@ -531,7 +531,7 @@ if(META_PIXEL_ID){
   fbq('init',META_PIXEL_ID);
   fbq('track','PageView');
   const offerEl=document.getElementById('oferta');
-  const vo=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ fbq('track','ViewContent',{content_name:'Kit Introdução Alimentar',value:24.99,currency:'BRL'}); vo.disconnect(); } },{threshold:.4});
+  const vo=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ fbq('track','ViewContent',{content_name:'Kit Introdução Alimentar',content_ids:['kit-introducao-alimentar'],content_type:'product',value:24.99,currency:'BRL'}); vo.disconnect(); } },{threshold:.4});
   vo.observe(offerEl);
 }
 
@@ -539,7 +539,7 @@ if(META_PIXEL_ID){
 document.querySelectorAll('[data-checkout]').forEach(a=>{
   if(CHECKOUT_URL){
     a.href = CHECKOUT_URL;
-    a.addEventListener('click',()=>{ try{ window.fbq && fbq('track','InitiateCheckout',{value:24.99,currency:'BRL'}); }catch(e){} });
+    a.addEventListener('click',()=>{ try{ window.fbq && fbq('track','InitiateCheckout',{content_name:'Kit Introdução Alimentar',content_ids:['kit-introducao-alimentar'],content_type:'product',value:24.99,currency:'BRL'}); }catch(e){} });
   }
 });
 
