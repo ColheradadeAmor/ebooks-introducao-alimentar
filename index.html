@@ -82,15 +82,19 @@ section{padding:72px 0}
 .price em{font-style:normal;flex-basis:100%;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--coral)}
 .ticks{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:22px;list-style:none;font-weight:700;font-size:.93rem;color:var(--olive)}
 .ticks li::before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--sage);color:#fff;font-size:.72rem;margin-right:7px}
-.covers{position:relative;width:100%;max-width:560px;margin-inline:auto;aspect-ratio:1/.8}
-.covers img{border-radius:10px;box-shadow:var(--shadow);width:34%;height:auto;position:absolute;border:4px solid #fff;background:#fff}
-.covers .c1{left:0;top:14%;transform:rotate(-8deg);z-index:1;animation:float 6s ease-in-out infinite}
-.covers .c2{left:22%;top:2%;transform:rotate(-3deg);z-index:2;animation:float 6s ease-in-out -1.5s infinite}
-.covers .c3{left:44%;top:10%;transform:rotate(3deg);z-index:3;animation:float 6s ease-in-out -3s infinite}
-.covers .c4{left:66%;top:0;transform:rotate(8deg);z-index:4;animation:float 6s ease-in-out -4.5s infinite}
+.covers{position:relative;width:100%;max-width:600px;margin-inline:auto;aspect-ratio:1/.5;margin-bottom:72px}
+.covers .cv{position:absolute;width:23.5%;display:block;border-radius:10px;transition:transform .2s ease,box-shadow .2s ease;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.covers .cv img{display:block;border-radius:10px;box-shadow:var(--shadow);width:100%;height:auto;border:4px solid #fff;background:#fff}
+.covers .cv:hover,.covers .cv:focus-visible{transform:translateY(-8px) rotate(0deg) scale(1.05);z-index:9}
+.covers .cv:focus-visible{outline:3px solid var(--olive);outline-offset:4px}
+.covers .cv small{position:absolute;left:50%;top:calc(100% + 8px);translate:-50% 0;white-space:nowrap;font:800 .68rem 'Nunito',sans-serif;color:var(--olive);letter-spacing:.03em;text-transform:uppercase}
+.covers .c1{left:0;top:10%;transform:rotate(-4deg);animation:float 6s ease-in-out infinite}
+.covers .c2{left:25.5%;top:0;transform:rotate(-1.5deg);animation:float 6s ease-in-out -1.5s infinite}
+.covers .c3{left:51%;top:10%;transform:rotate(1.5deg);animation:float 6s ease-in-out -3s infinite}
+.covers .c4{left:76.5%;top:0;transform:rotate(4deg);animation:float 6s ease-in-out -4.5s infinite}
 @keyframes float{0%,100%{translate:0 0}50%{translate:0 -9px}}
-.badge{position:absolute;z-index:6;right:-1%;bottom:0;background:var(--coral);color:#fff;font-weight:800;border-radius:50%;width:112px;height:112px;display:grid;place-items:center;text-align:center;font-size:.8rem;line-height:1.15;transform:rotate(-8deg);box-shadow:0 10px 24px -8px rgba(232,98,79,.7)}
-.badge b{font-family:'Fraunces',serif;font-size:1.7rem;display:block}
+.badge{position:absolute;z-index:6;right:-2%;bottom:-62px;pointer-events:none;background:var(--coral);color:#fff;font-weight:800;border-radius:50%;width:96px;height:96px;display:grid;place-items:center;text-align:center;font-size:.72rem;line-height:1.15;transform:rotate(-8deg);box-shadow:0 10px 24px -8px rgba(232,98,79,.7)}
+.badge b{font-family:'Fraunces',serif;font-size:1.45rem;display:block}
 
 /* stats */
 .stats{background:var(--olive);color:#fff;padding:26px 0}
@@ -271,6 +275,9 @@ details p{padding:0 0 20px;color:var(--muted)}
 .t-q div{background:#fff;border:1px solid var(--line);border-left:5px solid var(--apricot);border-radius:14px;padding:12px 16px}
 .t-q b{color:var(--olive)}.t-q span{display:block;color:var(--muted);font-size:.9rem}
 .t-q i{display:block;color:var(--olive);font-weight:700;font-size:.92rem;line-height:1.45}
+.t-q span a{color:inherit;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}.t-q span a:hover,.t-q span a:focus-visible{text-decoration-style:solid}
+.samples{scroll-margin-top:70px}
+.cta-row{text-align:center;margin-top:30px}.cta-row p{margin:10px 0 0;font-size:.85rem;color:var(--muted);font-weight:700}
 .t-q i+span{margin-top:7px;color:var(--coral);font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
 .t-time{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
 .t-time:before{content:"";position:absolute;left:8%;right:8%;top:22px;height:3px;background:repeating-linear-gradient(90deg,var(--apricot) 0 10px,transparent 10px 18px)}
@@ -323,13 +330,12 @@ details p{padding:0 0 20px;color:var(--muted)}
     </div>
     <div style="min-width:0"><div class="covers" aria-label="Capas dos quatro ebooks">
       <div class="badge"><span><b>4 em 1</b>kit<br>completo</span></div>
-      <img class="c1" src="img/guia-capa.jpg" alt="Capa do Guia Visual dos Cortes e Preparos Seguros dos Alimentos" width="827" height="1170">
-      <img class="c2" src="img/papinhas-capa.jpg" alt="Capa do ebook Papinhas para Bebês" width="827" height="1170">
-      <img class="c3" src="img/lanchinhos-capa.jpg" alt="Capa do ebook 30 Lanchinhos para Bebês" width="827" height="1170">
-      <img class="c4" src="img/receitas-capa.jpg" alt="Capa do ebook Receitas Nutritivas para Toda a Família" width="827" height="1170">
-    </div><div class="t-q" style="gap:10px"><div><i>“Tenho pavor de oferecer comida em pedaços e meu bebê engasgar na minha frente. Como eu sei a diferença entre uma ânsia normal e um engasgo de verdade, e qual o jeito certo de cortar os alimentos pra não correr risco?”</i><span>Guia Visual · reflexo de gag × engasgo · como reduzir o risco</span></div><div><i>“Meu bebê só dá duas colheradas, joga o resto no chão e vira o rosto. Tenho medo de ele estar passando fome… devo complementar com mamadeira logo depois do almoço?”</i><span>Papinhas · sinais de fome e saciedade · cada bebê tem seu ritmo</span></div><div><i>“Todo mundo aqui em casa fala que a comida fica sem gosto e manda colocar uma pitadinha de sal. O que eu realmente posso usar para temperar a comida antes de 1 ano, e quando posso dar ovo e peixe sem medo de alergia?”</i><span>Papinhas · como dar sabor sem sal · Guia Visual · alergênicos</span></div><div><i>“Já tentei dar legumes três vezes e ele faz careta e cospe tudo pra fora. Isso significa que ele não gosta e eu devo parar de oferecer, ou estou fazendo alguma coisa errada?”</i><span>Papinhas · “Quando meu bebê não aceita?”</span></div></div></div>
+      <a class="cv c1" href="#paginas" data-f="guia" aria-label="Ver páginas do ebook Guia Visual"><img src="img/guia-capa.jpg" alt="Capa do Guia Visual dos Cortes e Preparos Seguros dos Alimentos" width="827" height="1170"><small>Guia Visual</small></a><a class="cv c2" href="#paginas" data-f="papinhas" aria-label="Ver páginas do ebook Papinhas"><img src="img/papinhas-capa.jpg" alt="Capa do ebook Papinhas para Bebês" width="827" height="1170"><small>Papinhas</small></a><a class="cv c3" href="#paginas" data-f="lanchinhos" aria-label="Ver páginas do ebook Lanchinhos"><img src="img/lanchinhos-capa.jpg" alt="Capa do ebook 30 Lanchinhos para Bebês" width="827" height="1170"><small>Lanchinhos</small></a><a class="cv c4" href="#paginas" data-f="receitas" aria-label="Ver páginas do ebook Receitas da Família"><img src="img/receitas-capa.jpg" alt="Capa do ebook Receitas Nutritivas para Toda a Família" width="827" height="1170"><small>Receitas da Família</small></a>
+    </div><div class="t-q" style="gap:10px"><div><i>“Tenho pavor de oferecer comida em pedaços e meu bebê engasgar na minha frente. Como eu sei a diferença entre uma ânsia normal e um engasgo de verdade, e qual o jeito certo de cortar os alimentos pra não correr risco?”</i><span><a href="#paginas" data-f="guia">Guia Visual · reflexo de gag × engasgo · como reduzir o risco</a></span></div><div><i>“Meu bebê só dá duas colheradas, joga o resto no chão e vira o rosto. Tenho medo de ele estar passando fome… devo complementar com mamadeira logo depois do almoço?”</i><span><a href="#paginas" data-f="papinhas">Papinhas · sinais de fome e saciedade · cada bebê tem seu ritmo</a></span></div><div><i>“Todo mundo aqui em casa fala que a comida fica sem gosto e manda colocar uma pitadinha de sal. O que eu realmente posso usar para temperar a comida antes de 1 ano, e quando posso dar ovo e peixe sem medo de alergia?”</i><span><a href="#paginas" data-f="papinhas">Papinhas · como dar sabor sem sal</a> · <a href="#paginas" data-f="guia">Guia Visual · alergênicos</a></span></div><div><i>“Já tentei dar legumes três vezes e ele faz careta e cospe tudo pra fora. Isso significa que ele não gosta e eu devo parar de oferecer, ou estou fazendo alguma coisa errada?”</i><span><a href="#paginas" data-f="papinhas">Papinhas · “Quando meu bebê não aceita?”</a></span></div></div></div>
   </div>
 <div class="wrap t-band"><div class="t-title">O que vem em cada ebook</div><div class="t-cards"><div class="t-card"><img src="img/guia-capa.jpg" alt=""><div><small>Ebook 1 · 69 páginas</small><b>Guia Visual dos Cortes e Preparos</b><span>“Como eu corto isso?” 44 alimentos, um por página.</span></div></div><div class="t-card"><img src="img/papinhas-capa.jpg" alt=""><div><small>Ebook 2 · 52 páginas</small><b>Papinhas para Bebês</b><span>“O que cozinho hoje?” 30 receitas nutritivas.</span></div></div><div class="t-card"><img src="img/lanchinhos-capa.jpg" alt=""><div><small>Ebook 3 · 49 páginas</small><b>30 Lanchinhos para Bebês</b><span>“O que dou de lanche?” Sem sal e sem açúcar adicionado.</span></div></div><div class="t-card"><img src="img/receitas-capa.jpg" alt=""><div><small>Ebook 4 · 73 páginas</small><b>Receitas para Toda a Família</b><span>“Cozinho uma vez só para todos?” 57 receitas.</span></div></div></div></div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero os 4 ebooks por R$ 24,99 →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- 3 GERAÇÕES -->
@@ -371,7 +377,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 </section>
 
 <!-- SAMPLES -->
-<section class="samples">
+<section class="samples" id="paginas">
   <div class="wrap center">
     <span class="eyebrow">Espie por dentro</span>
     <h2 style="margin-top:16px">Páginas reais dos ebooks</h2>
@@ -405,6 +411,8 @@ details p{padding:0 0 20px;color:var(--muted)}
       <button class="thumb" data-b="receitas" data-full="img/receitas-bolo-banana.jpg"><img src="img/receitas-bolo-banana.jpg" alt="Receita de bolo de banana" loading="lazy"><span>Família · Bolo de banana</span></button>
     </div>
   </div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero meus 4 ebooks →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- OFFER -->
@@ -450,6 +458,8 @@ details p{padding:0 0 20px;color:var(--muted)}
       <div class="card rv"><div class="ico">🙅</div><h3>“Meu bebê não aceitou”</h3><p>Ele faz careta, cospe ou recusa e você não sabe se insiste ou muda.</p></div>
     </div>
   </div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero acabar com essas dúvidas →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- MYTH -->
@@ -467,6 +477,8 @@ details p{padding:0 0 20px;color:var(--muted)}
     </div>
     <p class="note">Guia informativo. Em caso de alergia, histórico familiar ou dúvida, converse com o pediatra do seu bebê.</p>
   </div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero os 4 ebooks por R$ 24,99 →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- JOURNEY -->
@@ -557,6 +569,8 @@ details p{padding:0 0 20px;color:var(--muted)}
       </div>
     </article>
   </div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero meus 4 ebooks agora →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- HOW IT WORKS -->
@@ -570,6 +584,8 @@ details p{padding:0 0 20px;color:var(--muted)}
       <div class="step rv"><h3>Abre e cozinha</h3><p>Leia no celular, tablet ou computador, ou imprima as páginas que quiser.</p></div>
     </div>
   </div>
+
+  <div class="wrap cta-row"><a class="btn pulse" data-checkout href="#oferta">Quero os 4 ebooks por R$ 24,99 →</a><p>Pagamento único · acesso por e-mail</p></div>
 </section>
 
 <!-- FAQ -->
@@ -667,6 +683,13 @@ const fbtns=document.querySelectorAll('.filters button'), thumbs=document.queryS
 fbtns.forEach(b=>b.addEventListener('click',()=>{
   fbtns.forEach(x=>x.setAttribute('aria-pressed',x===b));
   thumbs.forEach(t=>{ t.hidden = b.dataset.f!=='all' && t.dataset.b!==b.dataset.f; });
+}));
+
+/* ===== Rótulos das dúvidas -> galeria filtrada ===== */
+document.querySelectorAll('.t-q a[data-f], .covers a[data-f]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  const b=document.querySelector('.filters button[data-f="'+a.dataset.f+'"]'); if(b) b.click();
+  document.getElementById('paginas').scrollIntoView({behavior:'smooth',block:'start'});
 }));
 
 document.getElementById('y').textContent = new Date().getFullYear();
