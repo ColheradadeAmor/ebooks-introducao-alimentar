@@ -246,6 +246,53 @@ details p{padding:0 0 20px;color:var(--muted)}
   .rv{opacity:1;transform:none}
 }
 </style>
+
+<style>
+.t-band{margin-top:48px;position:relative;z-index:2}
+.t-cards{display:grid;gap:16px;grid-template-columns:repeat(4,1fr)}
+.t-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start}
+.t-card img{width:64px;border-radius:8px;flex:none;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.t-card b{display:block;font-family:Fraunces,serif;color:var(--olive);font-size:1.02rem;line-height:1.2}
+.t-card small{display:block;color:var(--coral);font-weight:800;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.t-card span{display:block;color:var(--muted);font-size:.9rem;margin-top:6px;line-height:1.4}
+.t-chips{display:flex;flex-wrap:wrap;gap:10px}
+.t-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;color:var(--olive);font-size:.95rem}
+.t-chip i{font-style:normal;color:var(--sage);margin-right:6px}
+.t-title{font-family:Fraunces,serif;color:var(--olive);font-size:1.35rem;font-weight:700;margin-bottom:14px}
+.t-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.t-nums div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 8px;text-align:center}
+.t-nums b{display:block;font-family:Fraunces,serif;font-size:2rem;color:var(--coral);line-height:1}
+.t-nums span{font-size:.82rem;color:var(--muted);font-weight:700}
+.t-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.t-gal figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.t-gal img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.t-gal figcaption{font-size:.74rem;font-weight:800;color:var(--olive);padding:6px 8px;text-align:center}
+.t-q{display:grid;gap:10px;margin-top:22px}
+.t-q div{background:#fff;border:1px solid var(--line);border-left:5px solid var(--apricot);border-radius:14px;padding:12px 16px}
+.t-q b{color:var(--olive)}.t-q span{display:block;color:var(--muted);font-size:.9rem}
+.t-q i{display:block;color:var(--olive);font-weight:700;font-size:.92rem;line-height:1.45}
+.t-q i+span{margin-top:7px;color:var(--coral);font-weight:800;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+.t-time{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.t-time:before{content:"";position:absolute;left:8%;right:8%;top:22px;height:3px;background:repeating-linear-gradient(90deg,var(--apricot) 0 10px,transparent 10px 18px)}
+.t-time div{text-align:center;position:relative;padding:0 10px}
+.t-time em{width:46px;height:46px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font:800 1.1rem Fraunces,serif;margin:0 auto 10px;font-style:normal;box-shadow:0 8px 16px -6px rgba(232,98,79,.6)}
+.t-time b{display:block;color:var(--olive)}.t-time span{color:var(--muted);font-size:.9rem}
+.t-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.t-tbl{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.t-tbl .r{display:grid;grid-template-columns:1fr 1.6fr;gap:14px;padding:14px 20px;border-bottom:1px solid var(--line);align-items:center}
+.t-tbl .r:last-child{border:0}.t-tbl .h{background:var(--olive);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.t-tbl .r span:first-child{font-weight:800;color:var(--coral)}
+.t-tbl .h span:first-child{color:#fff}
+.t-tbl small{display:block;color:var(--muted)}
+.t-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;margin-top:20px}
+.t-list li{display:flex;gap:10px;font-weight:700;color:var(--olive);font-size:.95rem;line-height:1.35}
+.t-list li:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;font-size:.8rem}
+.t-row4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px;text-align:center}
+.t-row4 img{width:62%;margin:0 auto 10px;border-radius:8px;box-shadow:0 14px 26px -10px rgba(0,0,0,.45)}
+.t-row4 b{display:block;font-family:Fraunces,serif;color:var(--olive);line-height:1.2}
+.t-row4 span{display:block;color:var(--muted);font-size:.88rem;margin-top:4px}
+@media(max-width:899px){.t-cards{grid-template-columns:1fr}.t-card{min-width:0}.t-nums,.t-gal,.t-time,.t-row4{grid-template-columns:repeat(2,1fr)}.t-two{grid-template-columns:1fr}.t-list{grid-template-columns:1fr}.t-time:before{display:none}.t-time div{margin-bottom:14px}}
+</style>
 </head>
 <body>
 
@@ -263,7 +310,7 @@ details p{padding:0 0 20px;color:var(--muted)}
     <div>
       <span class="eyebrow">4 ebooks em PDF · acesso imediato</span>
       <h1 style="margin-top:18px">Comece a introdução alimentar <em>sem medo</em> e sem ficar sem ideia</h1>
-      <p class="lead">As respostas para os medos mais comuns da mãe de primeira viagem: como cortar cada alimento com segurança, o que cozinhar, o que levar de lanche e como organizar as refeições. Para você olhar o prato do seu bebê com mais calma e mais confiança.</p>
+      <p class="lead"><b style="color:var(--olive)">O que dar de comer? Como cortar sem risco de engasgo? Pode ou não pode? Mito ou verdade?</b><br>Tire todas as dúvidas de mãe de primeira viagem em um só lugar: <b style="color:var(--olive)">TUDO</b> sobre Introdução Alimentar na prática, para você alimentar seu bebê com segurança e zero culpa.</p>
       <div class="price-row">
         <div class="price"><small>de</small><s>R$&nbsp;79,99</s><small>por</small><b>R$&nbsp;24,99</b><em>Preço promocional</em></div>
         <a class="btn pulse" data-checkout href="#oferta">Quero meus 4 ebooks →</a>
@@ -274,14 +321,15 @@ details p{padding:0 0 20px;color:var(--muted)}
         <li>Leia no celular</li>
       </ul>
     </div>
-    <div class="covers" aria-label="Capas dos quatro ebooks">
+    <div style="min-width:0"><div class="covers" aria-label="Capas dos quatro ebooks">
       <div class="badge"><span><b>4 em 1</b>kit<br>completo</span></div>
       <img class="c1" src="img/guia-capa.jpg" alt="Capa do Guia Visual dos Cortes e Preparos Seguros dos Alimentos" width="827" height="1170">
       <img class="c2" src="img/papinhas-capa.jpg" alt="Capa do ebook Papinhas para Bebês" width="827" height="1170">
       <img class="c3" src="img/lanchinhos-capa.jpg" alt="Capa do ebook 30 Lanchinhos para Bebês" width="827" height="1170">
       <img class="c4" src="img/receitas-capa.jpg" alt="Capa do ebook Receitas Nutritivas para Toda a Família" width="827" height="1170">
-    </div>
+    </div><div class="t-q" style="gap:10px"><div><i>“Tenho pavor de oferecer comida em pedaços e meu bebê engasgar na minha frente. Como eu sei a diferença entre uma ânsia normal e um engasgo de verdade, e qual o jeito certo de cortar os alimentos pra não correr risco?”</i><span>Guia Visual · reflexo de gag × engasgo · como reduzir o risco</span></div><div><i>“Meu bebê só dá duas colheradas, joga o resto no chão e vira o rosto. Tenho medo de ele estar passando fome… devo complementar com mamadeira logo depois do almoço?”</i><span>Papinhas · sinais de fome e saciedade · cada bebê tem seu ritmo</span></div><div><i>“Todo mundo aqui em casa fala que a comida fica sem gosto e manda colocar uma pitadinha de sal. O que eu realmente posso usar para temperar a comida antes de 1 ano, e quando posso dar ovo e peixe sem medo de alergia?”</i><span>Papinhas · como dar sabor sem sal · Guia Visual · alergênicos</span></div><div><i>“Já tentei dar legumes três vezes e ele faz careta e cospe tudo pra fora. Isso significa que ele não gosta e eu devo parar de oferecer, ou estou fazendo alguma coisa errada?”</i><span>Papinhas · “Quando meu bebê não aceita?”</span></div></div></div>
   </div>
+<div class="wrap t-band"><div class="t-title">O que vem em cada ebook</div><div class="t-cards"><div class="t-card"><img src="img/guia-capa.jpg" alt=""><div><small>Ebook 1 · 69 páginas</small><b>Guia Visual dos Cortes e Preparos</b><span>“Como eu corto isso?” 44 alimentos, um por página.</span></div></div><div class="t-card"><img src="img/papinhas-capa.jpg" alt=""><div><small>Ebook 2 · 52 páginas</small><b>Papinhas para Bebês</b><span>“O que cozinho hoje?” 30 receitas nutritivas.</span></div></div><div class="t-card"><img src="img/lanchinhos-capa.jpg" alt=""><div><small>Ebook 3 · 49 páginas</small><b>30 Lanchinhos para Bebês</b><span>“O que dou de lanche?” Sem sal e sem açúcar adicionado.</span></div></div><div class="t-card"><img src="img/receitas-capa.jpg" alt=""><div><small>Ebook 4 · 73 páginas</small><b>Receitas para Toda a Família</b><span>“Cozinho uma vez só para todos?” 57 receitas.</span></div></div></div></div>
 </section>
 
 <!-- 3 GERAÇÕES -->
