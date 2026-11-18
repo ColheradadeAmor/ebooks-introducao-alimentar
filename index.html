@@ -223,6 +223,24 @@ details p{padding:0 0 20px;color:var(--muted)}
   .badge{right:0}
   .sticky{display:none}
 }
+
+/* ---- 3 gerações ---- */
+.gen-strip{background:var(--sage-soft);border-block:1px solid var(--line);padding:14px 0}
+.gen-strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 18px;text-align:center;font-weight:700;color:var(--olive)}
+.gen-strip .gens{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
+.gen-strip .g{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.95rem}
+.gen-strip .arr{color:var(--apricot);font-weight:800}
+.story{padding:56px 0;background:var(--cream-2)}
+.story .box{max-width:760px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:30px 24px}
+.story h2{margin:14px 0 16px}
+.story p{margin:0 0 14px;line-height:1.7;color:var(--ink)}
+.story .tree{display:grid;gap:10px;margin:22px 0}
+.story .tree div{background:var(--blush);border-radius:16px;padding:14px 16px}
+.story .tree b{display:block;color:var(--olive)}
+.story .tree span{color:var(--muted);font-size:.95rem}
+.story .sign{font-weight:800;color:var(--olive);margin-top:6px}
+.story .note{font-size:.88rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:18px}
+@media(min-width:900px){.story .box{padding:44px 52px}.story .tree{grid-template-columns:repeat(3,1fr)}}
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
@@ -245,7 +263,7 @@ details p{padding:0 0 20px;color:var(--muted)}
     <div>
       <span class="eyebrow">4 ebooks em PDF · acesso imediato</span>
       <h1 style="margin-top:18px">Comece a introdução alimentar <em>sem medo</em> e sem ficar sem ideia</h1>
-      <p class="lead">Como cortar cada alimento, o que cozinhar, o que levar de lanche e o que servir para a família toda. Quatro guias bonitos e práticos para consultar direto na cozinha.</p>
+      <p class="lead">As respostas para os medos mais comuns da mãe de primeira viagem: como cortar cada alimento com segurança, o que cozinhar, o que levar de lanche e como organizar as refeições. Para você olhar o prato do seu bebê com mais calma e mais confiança.</p>
       <div class="price-row">
         <div class="price"><small>de</small><s>R$&nbsp;79,99</s><small>por</small><b>R$&nbsp;24,99</b><em>Preço promocional</em></div>
         <a class="btn pulse" data-checkout href="#oferta">Quero meus 4 ebooks →</a>
@@ -266,6 +284,14 @@ details p{padding:0 0 20px;color:var(--muted)}
   </div>
 </section>
 
+<!-- 3 GERAÇÕES -->
+<div class="gen-strip">
+  <div class="wrap">
+    <span>Feito em família, em 3 gerações de cuidado com a comida:</span>
+    <span class="gens"><span class="g">Vó Natália</span><span class="arr" aria-hidden="true">→</span><span class="g">Maria</span><span class="arr" aria-hidden="true">→</span><span class="g">Ana</span></span>
+  </div>
+</div>
+
 <!-- STATS -->
 <div class="stats" role="list">
   <div class="wrap">
@@ -275,6 +301,26 @@ details p{padding:0 0 20px;color:var(--muted)}
     <div role="listitem"><b>44</b><span>alimentos com corte e preparo</span></div>
   </div>
 </div>
+
+<!-- HISTÓRIA -->
+<section class="story" id="historia">
+  <div class="wrap">
+    <div class="box">
+      <span class="eyebrow">A história por trás do kit</span>
+      <h2>Receitas de família, passadas de mão em mão</h2>
+      <p>Na nossa casa, a comida sempre foi feita com carinho e com atenção à saúde: comida de verdade, preparada em casa, priorizando alimentos naturais e sem conservantes.</p>
+      <p>Esses ebooks foram escritos pela <b>Maria</b>, que aprendeu a cozinhar e a cuidar da alimentação das crianças com a <b>Vó Natália</b>. Hoje, quem usa essas receitas e esses cuidados no dia a dia é a <b>Ana</b>, minha esposa.</p>
+      <div class="tree">
+        <div><b>Vó Natália</b><span>Ensinou o cuidado com o que vai ao prato.</span></div>
+        <div><b>Maria</b><span>Reuniu tudo nos ebooks que você vê aqui.</span></div>
+        <div><b>Ana</b><span>Usa na prática, na nossa cozinha.</span></div>
+      </div>
+      <p>Sabemos como é bater o medo na hora de oferecer o primeiro alimento: <i>"será que corto certo?", "será que ele vai engasgar?", "será que está comendo o suficiente?"</i> Montamos este kit para tirar essas dúvidas e ajudar você a servir cada refeição com mais tranquilidade.</p>
+      <p class="sign">Com carinho, a família que preparou este material.</p>
+      <p class="note">Este material é informativo e não substitui o pediatra ou o nutricionista que acompanha o seu bebê. Cada bebê é único.</p>
+    </div>
+  </div>
+</section>
 
 <!-- SAMPLES -->
 <section class="samples">
